@@ -218,6 +218,13 @@ nav ul {
     display: flex; }
     nav ul li a {
       padding: 12px; }
+nav .left-nav {
+  justify-content: flex-start; }
+nav .logo {
+  padding: 12px;
+  justify-content: center; }
+nav .right-nav {
+  justify-content: flex-end; }
 
 /* styles */
 .heading {

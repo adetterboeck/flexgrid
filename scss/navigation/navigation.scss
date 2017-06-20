@@ -9,4 +9,14 @@ nav {
       }
     }
   }
+  .left-nav {
+    justify-content: flex-start;
+  }
+  .logo {
+    padding: 12px;
+    justify-content: center;
+  }
+  .right-nav {
+    justify-content: flex-end;
+  }
 }
