@@ -1,0 +1,12 @@
+nav {
+  & ul {
+    display: flex;
+    width: 100%;
+    & li {
+      display: flex;
+      & a {
+        padding: 12px;
+      }
+    }
+  }
+}

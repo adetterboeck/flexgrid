@@ -1,0 +1,235 @@
+/* Variables */
+/* default */
+/* Reset */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html {
+  background-color: #ececec; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 16px;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block; }
+
+body {
+  line-height: 1.31; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Grid system */
+/* Flex container set up */
+/*
+ * $orientation ==
+ *  "left" or "right" aside
+ */
+/* content width */
+.content-wrapper {
+  max-width: 1300px;
+  margin: 0  auto; }
+
+nav {
+  /* macht die nav zu einen flex container */
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  color: white;
+  background: rgba(63, 106, 181, 0.86);
+  padding: 12px 12px; }
+
+.tabs {
+  /* macht die nav zu einen flex container */
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  background: rgba(63, 106, 181, 0.54);
+  /* ToDo: In variablen auslagern */
+  padding: 12px 12px; }
+
+.breadcrumb {
+  /* macht die nav zu einen flex container */
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  background: rgba(63, 106, 181, 0.12);
+  /* ToDo: In variablen auslagern */
+  padding: 12px 12px; }
+
+.full-page-layout {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1 auto;
+  margin: 8px;
+  padding: 16px;
+  background: white; }
+
+/* ==== two col layout varianten === */
+.two-col-layout-left {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap; }
+  .two-col-layout-left aside, .two-col-layout-left section {
+    padding: 16px;
+    margin: 8px; }
+  .two-col-layout-left aside {
+    flex: 1;
+    order: 1;
+    background: white; }
+  .two-col-layout-left section {
+    flex: 3;
+    order: 2;
+    background: white; }
+    @media (max-width: 769px) {
+      .two-col-layout-left section {
+        flex: 1 100%; } }
+
+.two-col-layout-right {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap; }
+  .two-col-layout-right aside, .two-col-layout-right section {
+    padding: 16px;
+    margin: 8px; }
+  .two-col-layout-right aside {
+    flex: 1;
+    order: 2;
+    background: white; }
+  .two-col-layout-right section {
+    flex: 3;
+    order: 1;
+    background: white; }
+    @media (max-width: 769px) {
+      .two-col-layout-right section {
+        flex: 1 100%; } }
+
+.two-col-layout-left-collapse {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 8px; }
+  .two-col-layout-left-collapse aside, .two-col-layout-left-collapse section {
+    padding: 16px; }
+  .two-col-layout-left-collapse aside {
+    flex: 1;
+    order: 1;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    background: white; }
+  .two-col-layout-left-collapse section {
+    flex: 3;
+    order: 2;
+    background: white; }
+    @media (max-width: 769px) {
+      .two-col-layout-left-collapse section {
+        flex: 1 100%; } }
+
+/* === grid layout === */
+.grid-layout {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap; }
+  .grid-layout .grid-item {
+    width: 180px;
+    padding: 16px;
+    margin: 8px;
+    background: white; }
+    .grid-layout .grid-item img {
+      width: 100%;
+      height: auto; }
+
+footer {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1 auto;
+  margin: 8px;
+  padding: 16px;
+  background: white; }
+
+/* Navigation */
+nav ul {
+  display: flex;
+  width: 100%; }
+  nav ul li {
+    display: flex; }
+    nav ul li a {
+      padding: 12px; }
+
+/* styles */
+.heading {
+  flex: 1 100%;
+  order: 1;
+  margin: 8px;
+  padding: 32px 0 8px 0; }
+
+h1 {
+  font-size: 40px; }
+
+h2 {
+  font-size: 20px; }
+
+/*# sourceMappingURL=main.css.map */

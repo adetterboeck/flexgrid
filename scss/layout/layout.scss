@@ -1,0 +1,74 @@
+/* content width */
+.content-wrapper {
+  max-width: 1300px;
+  margin:0  auto;
+}
+
+nav {
+  /* macht die nav zu einen flex container */
+  @include flex-container();
+
+  color:white;
+  background: rgba(63,106,181,0.86);
+  padding: 12px 12px;
+}
+
+.tabs{
+  /* macht die nav zu einen flex container */
+  @include flex-container();
+
+  background: rgba(63,106,181,0.54);
+  /* ToDo: In variablen auslagern */
+  padding: 12px 12px;
+}
+
+.breadcrumb{
+  /* macht die nav zu einen flex container */
+  @include flex-container();
+
+  background: rgba(63,106,181,0.12);
+  /* ToDo: In variablen auslagern */
+  padding: 12px 12px;
+}
+
+
+.full-page-layout{
+  @include flex-container();
+
+  @include full-page-layout();
+}
+
+/* ==== two col layout varianten === */
+
+.two-col-layout-left{
+  @include flex-container();
+
+  @include two-col-layout("left");
+
+}
+
+.two-col-layout-right {
+  @include flex-container();
+
+  @include two-col-layout("right")
+}
+
+.two-col-layout-left-collapse {
+  @include flex-container();
+
+  @include two-col-layout-collapse("left");
+}
+
+/* === grid layout === */
+
+.grid-layout {
+  @include flex-container();
+
+  @include grid-layout();
+}
+
+footer {
+  @include flex-container();
+
+  @include full-page-layout();
+}
