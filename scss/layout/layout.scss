@@ -8,9 +8,6 @@ nav {
   /* macht die nav zu einen flex container */
   @include flex-container();
 
-  color:white;
-  background: rgba(63,106,181,0.86);
-  padding: 12px 12px;
 }
 
 .tabs{

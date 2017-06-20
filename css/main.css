@@ -60,10 +60,7 @@ nav {
   display: -ms-flexbox;
   display: -moz-flex;
   display: -webkit-flex;
-  display: flex;
-  color: white;
-  background: rgba(63, 106, 181, 0.86);
-  padding: 12px 12px; }
+  display: flex; }
 
 .tabs {
   /* macht die nav zu einen flex container */
@@ -211,20 +208,24 @@ footer {
   background: white; }
 
 /* Navigation */
-nav ul {
-  display: flex;
-  width: 100%; }
-  nav ul li {
-    display: flex; }
-    nav ul li a {
-      padding: 12px; }
-nav .left-nav {
-  justify-content: flex-start; }
-nav .logo {
-  padding: 12px;
-  justify-content: center; }
-nav .right-nav {
-  justify-content: flex-end; }
+nav {
+  color: white;
+  background: rgba(63, 106, 181, 0.86);
+  padding: 6px 12px; }
+  nav ul {
+    display: flex;
+    width: 100%; }
+    nav ul li {
+      display: flex; }
+      nav ul li a {
+        padding: 12px; }
+  nav .left-nav {
+    justify-content: flex-start; }
+  nav .logo {
+    padding: 12px;
+    justify-content: center; }
+  nav .right-nav {
+    justify-content: flex-end; }
 
 /* styles */
 .heading {
