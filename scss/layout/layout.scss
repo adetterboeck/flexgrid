@@ -56,6 +56,12 @@ nav {
   @include two-col-layout-collapse("left");
 }
 
+.two-col-list {
+ @include flex-container();
+
+  @include two-col-list();
+}
+
 /* === grid layout === */
 
 .grid-layout {

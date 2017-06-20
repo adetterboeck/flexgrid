@@ -47,6 +47,7 @@ table {
  * $orientation ==
  *  "left" or "right" aside
  */
+/* lists */
 /* content width */
 .content-wrapper {
   max-width: 1300px;
@@ -174,6 +175,33 @@ nav {
     @media (max-width: 769px) {
       .two-col-layout-left-collapse section {
         flex: 1 100%; } }
+
+.two-col-list {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 8px; }
+  .two-col-list aside, .two-col-list section {
+    padding: 16px; }
+  .two-col-list aside {
+    flex: 1;
+    order: 1;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    background: white; }
+  .two-col-list section {
+    flex: 3;
+    order: 2;
+    background: white; }
+    @media (max-width: 769px) {
+      .two-col-list section {
+        flex: 1 100%; } }
+  .two-col-list aside {
+    border: none; }
 
 /* === grid layout === */
 .grid-layout {

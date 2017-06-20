@@ -110,3 +110,11 @@
     }
   }
 }
+
+/* lists */
+@mixin two-col-list(){
+  @include two-col-layout-collapse("left");
+  aside {
+    border: none;
+  }
+}
