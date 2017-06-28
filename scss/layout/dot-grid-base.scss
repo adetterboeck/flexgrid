@@ -13,7 +13,6 @@
 @mixin full-page-layout() {
   flex: 1 auto;
   margin: 8px;
-  padding: 16px;
   background: rgba(255,255,255,1);
 }
 
@@ -25,12 +24,11 @@
 @mixin two-col-layout($orientation){
   flex-flow: row wrap;
 
-  aside, section {
-    padding: 16px;
+  & aside, & section {
     margin: 8px;
   }
 
-  aside{
+  & aside{
     flex: 1;
 
     @if $orientation == "right"{
@@ -42,7 +40,7 @@
 
     background: rgba(255,255,255,1);
   }
-  section {
+  & section {
     flex: 3;
 
     @if $orientation == "right"{
@@ -61,13 +59,11 @@
 
 @mixin two-col-layout-collapse($orientation){
   flex-flow: row wrap;
-  margin: 8px;
 
-  aside, section {
-    padding: 16px;
+  & aside, & section {
   }
 
-  aside{
+  & aside{
     flex: 1;
 
     @if $orientation == "right"{
@@ -80,7 +76,7 @@
     border-right: 1px solid rgba(0,0,0,0.12);
     background: rgba(255,255,255,1);
   }
-  section {
+  & section {
     flex: 3;
 
     @if $orientation == "right"{
@@ -97,6 +93,7 @@
   }
 }
 
+/* grid layout */
 @mixin grid-layout {
   flex-wrap: wrap;
   .grid-item {
@@ -108,13 +105,40 @@
       width: 100%;
       height: auto;
     }
+    @media (max-width:769px){
+      flex: 1 100%;
+    }
   }
 }
 
 /* lists */
 @mixin two-col-list(){
-  @include two-col-layout-collapse("left");
-  aside {
-    border: none;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  & li {
+    flex:1;
+    a {
+      @include flex-container();
+      flex:1;
+      padding: $list-padding-base;
+      & aside {
+        border: none;
+        padding: 0 16px 0 0;
+        background: none;
+        & img {
+          max-height: 64px;
+          width: auto;
+        }
+      }
+      & section {
+        flex:3;
+        padding: 0;
+        background: none;
+      }
+    }
+    & a:hover {
+      background-color: rgba(63, 106, 181, 0.12);
+    }
   }
 }

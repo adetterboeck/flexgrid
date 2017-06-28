@@ -1,0 +1,39 @@
+.article-detail-head {
+  @include flex-container();
+
+  & .article-gallery,
+  & .article-description {
+	flex: 1;
+
+	padding: $box-padding-base;
+	@media (max-width: 1024px){
+		padding: $box-padding-base-mobile;
+	}
+	background: deeppink;
+  }
+
+  & .article-gallery {
+	@include flex-container();
+	 & .thumb-gallery {
+	   flex: 1;
+	   padding: 0 8px;
+	 }
+	& .aritcle-big-image {
+	  flex: 4;
+	  text-align: center;
+	}
+  }
+
+}
+
+.order-matrix {
+  @include flex-container();
+  flex: 1;
+
+  padding: $box-padding-base;
+  @media (max-width: 1024px){
+	padding: $box-padding-base-mobile;
+  }
+
+  background: hotpink;
+}

@@ -1,5 +1,5 @@
 /* Variables */
-@import "variables/typography";
+@import "variables/variables";
 
 /* Reset */
 @import "vendor/reset";
@@ -8,9 +8,14 @@
 @import "layout/dot-grid-base";
 @import "layout/layout";
 
-/* Navigation */
-@import "navigation/navigation";
-
 /* styles */
 @import "styles/typo";
 
+/* Navigation */
+@import "navigation/navigation";
+
+/* components */
+@import "components/content-bar";
+
+/* page layouts */
+@import "layout/article-detail";

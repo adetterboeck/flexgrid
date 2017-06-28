@@ -65,8 +65,6 @@ nav {
 /* === grid layout === */
 
 .grid-layout {
-  @include flex-container();
-
   @include grid-layout();
 }
 
